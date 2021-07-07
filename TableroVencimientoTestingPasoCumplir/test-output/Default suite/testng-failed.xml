@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.tablerovencimiento.testng.TableroVencimientoTest">
+      <class name="com.tablerovencimiento.testng.TableroLaboralTest">
         <methods>
           <include name="beforeClass"/>
-          <include name="testFlujo1"/>
-          <include name="afterClass"/>
+          <include name="testFlujo2Error"/>
         </methods>
-      </class> <!-- com.tablerovencimiento.testng.TableroVencimientoTest -->
+      </class> <!-- com.tablerovencimiento.testng.TableroLaboralTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

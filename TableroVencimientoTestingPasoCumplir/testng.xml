@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Flujo1Vencimiento">
+    <classes>
+      <class name="com.tablerovencimiento.testng.TableroAuditoriaTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Flujo2Laboral">
+  	<classes>
+  		<class name="com.tablerovencimiento.testng.TableroLaboralTest"/>
+  	</classes>
+  </test>
+  <test name="Flujo3Auditoria">
+  	<classes>
+      	<class name="com.tablerovencimiento.testng.TableroVencimientoTest"/>
+  	</classes>
+  </test>
+</suite> <!-- Suite -->

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test name="Flujo2Laboral(failed)">
+    <classes>
+      <class name="com.tablerovencimiento.testng.TableroLaboralTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="testFlujo2Error"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.tablerovencimiento.testng.TableroLaboralTest -->
+      <class name="com.tablerovencimiento.testng.TableroVencimientoTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.tablerovencimiento.testng.TableroVencimientoTest -->
+      <class name="com.tablerovencimiento.testng.TableroAuditoriaTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.tablerovencimiento.testng.TableroAuditoriaTest -->
+    </classes>
+  </test> <!-- Flujo2Laboral(failed) -->
+</suite> <!-- Failed suite [Suite] -->
