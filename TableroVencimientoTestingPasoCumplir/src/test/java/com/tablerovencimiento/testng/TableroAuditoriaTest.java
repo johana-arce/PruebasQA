@@ -26,6 +26,7 @@ public class TableroAuditoriaTest {
 
 	By cerradoBtnLocator = By.xpath("/html/body/app-root/app-layout/div/section/div/app-tablero/div[1]/div/div/div[1]/div/div[2]/label[3]");
 	By selectObligacionLocator = By.xpath("//*[@id=\"radios[object Object]\"]");
+	By clienteLocator = By.xpath("//*[@id=\"table-ext-1\"]/tbody/tr[1]/td[3]/div");
 	
 	By accionesBtnLocator = By.xpath("/html/body/app-root/app-layout/div/section/div/app-tablero/div[1]/div/div/div[1]/div/div[1]/button[4]");
 	By eliminarCorteLocator = By.xpath("/html/body/app-root/app-layout/div/section/div/app-tablero/div[1]/div/div/div[1]/div/div[1]/div/a[7]");
@@ -45,8 +46,10 @@ public class TableroAuditoriaTest {
 	By selectAbiertoLocator = By.xpath("//*[@id=\"radios[object Object]\"]");
 	By eliminarCorteAbiertoLocator = By.xpath("/html/body/app-root/app-layout/div/section/div/app-tablero/div[1]/div/div/div[1]/div/div[1]/div/a[8]");
 	
+	
 	@Test
 	public void testFlujo3() throws InterruptedException {
+		String cliente;
 		// Inicia sesión
 		driver.findElement(usuarioLocator).sendKeys("0004");
 		driver.findElement(contraLocator).sendKeys("Maxi8817");
@@ -90,20 +93,20 @@ public class TableroAuditoriaTest {
 		ewait.until(ExpectedConditions.presenceOfElementLocated(siguienteAñoLocator));
 		driver.findElement(siguienteAñoLocator).click();
 		driver.findElement(diciembre2022Locator).click();
-		
+		Thread.sleep(2000);
 		ewait.until(ExpectedConditions.presenceOfElementLocated(selectObligacionLocator));
 		driver.findElement(selectObligacionLocator).click();
+		cliente=driver.findElement(clienteLocator).getText();
 		
 		//Eliminar
 		driver.findElement(accionesBtnLocator).click();
+		
 		driver.findElement(eliminarCorteAbiertoLocator).click();
 		ewait.until(ExpectedConditions.presenceOfElementLocated(eliminarBtnLocator));
-		//driver.findElement(eliminarBtnLocator).click();
+		driver.findElement(eliminarBtnLocator).click();
 		Thread.sleep(4000);
-		/*ewait.until(ExpectedConditions.presenceOfElementLocated(okBtnLocator));
-		System.out.println(driver.findElement(msgErrorLocator).getText());
-		assertEquals(driver.findElement(msgErrorLocator).getText(), "¡Lo sentimos!");
-		driver.findElement(okBtnLocator).click();*/
+		ewait.until(ExpectedConditions.presenceOfElementLocated(okBtnLocator));
+		assertEquals(driver.findElement(clienteLocator).getText(), cliente);
 	}
 
 	@BeforeClass

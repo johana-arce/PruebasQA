@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test name="Flujo1Vencimiento">
     <classes>
-      <class name="com.tablerovencimiento.testng.TableroAuditoriaTest"/>
+      <class name="com.tablerovencimiento.testng.TableroVencimientoTest"/>
     </classes>
   </test> <!-- Test -->
   <test name="Flujo2Laboral">
@@ -13,7 +13,7 @@
   </test>
   <test name="Flujo3Auditoria">
   	<classes>
-      	<class name="com.tablerovencimiento.testng.TableroVencimientoTest"/>
+      	<class name="com.tablerovencimiento.testng.TableroAuditoriaTest"/>
   	</classes>
   </test>
 </suite> <!-- Suite -->

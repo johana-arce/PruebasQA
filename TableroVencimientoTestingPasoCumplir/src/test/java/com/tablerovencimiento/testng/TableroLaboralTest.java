@@ -91,7 +91,7 @@ public class TableroLaboralTest {
 		  assertEquals(driver.findElement(preLiquidacionLocator).getText(), "15/06/2021");
 		  System.out.println("Despues de los Asserts");
 		  
-		  //Liquidar
+		  //Liquidar, este intento va a fallar
 		  driver.findElement(accionesLocator).click();
 		  ewait.until(ExpectedConditions.presenceOfElementLocated(opLiquidarLocator));
 		  driver.findElement(opLiquidarLocator).click();
@@ -99,39 +99,8 @@ public class TableroLaboralTest {
 		  driver.findElement(liquidarBtnLocator).click();
 		  ewait.until(ExpectedConditions.presenceOfElementLocated(errorTxtMsgLocator));
 		  assertEquals(driver.findElement(errorTxtMsgLocator).getText(), "Error");
-	}
-
-	/*public void testFlujo2Ok() {
-		//Inicia sesión
-		  driver.findElement(usuarioLocator).sendKeys("0055");
-		  driver.findElement(contraLocator).sendKeys("Victo0810");
-		  driver.findElement(iniciarSesionBtnLocator).click();
-		  //Una vez que inicio sesión verifica el usuario
-		  assertEquals(driver.findElement(nombreUsuario).getText(), "REINOSO VICTORIA");
 		  
-		  WebDriverWait ewait = new WebDriverWait(driver, 10);
-		  ewait.until(ExpectedConditions.presenceOfElementLocated(tablerosLocator));
-		  driver.findElement(tablerosLocator).click();
-		  driver.findElement(laboralLocator).click();
-		  
-		  //Filtra el tablero Laboral por todo el mes de junio
-		  ewait.until(ExpectedConditions.presenceOfElementLocated(calendarioBtnLocator));
-		  driver.findElement(calendarioBtnLocator).click();
-		  driver.findElement(dia1Locator).click();
-		  driver.findElement(dia30Locator).click();
-		  driver.findElement(consultarBtnLocator).click();
-		  
-		  //Seleccionar una
-		  driver.findElement(selectCheckbox).click();
-		  driver.findElement(novedadesLocator).click();
-		  driver.findElement(novedadesEscLocator).click();
-		  driver.findElement(fechaLocator).click();
-		  ewait.until(ExpectedConditions.presenceOfElementLocated(aceptarBtnLocator));
-		  driver.findElement(aceptarBtnLocator).click();
-		  assertEquals(driver.findElement(novedadesLocator).getText(), "11/06/2021");
-		  assertEquals(driver.findElement(preLiquidacionLocator).getText(), "15/06/2021");
-		  
-		  //Agregar una observación
+		//Agregar una observación
 		  driver.findElement(envioPreLiqLocator).sendKeys("25/06/2021");
 		  ewait.until(ExpectedConditions.presenceOfElementLocated(op2ObsLocator));
 		  driver.findElement(op2ObsLocator).click();
@@ -151,7 +120,7 @@ public class TableroLaboralTest {
 		  ewait.until(ExpectedConditions.presenceOfElementLocated(aceptarBtnLocator));
 		  driver.findElement(aceptarBtnLocator).click();
 		  System.out.println(""+driver.findElement(liqDefLocator).isSelected());
-	}*/
+	}
 	
 	@BeforeClass
 	public void beforeClass() {

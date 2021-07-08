@@ -3,6 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test name="Flujo2Laboral(failed)">
     <classes>
+      <class name="com.tablerovencimiento.testng.TableroAuditoriaTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.tablerovencimiento.testng.TableroAuditoriaTest -->
       <class name="com.tablerovencimiento.testng.TableroLaboralTest">
         <methods>
           <include name="beforeClass"/>
@@ -16,12 +22,29 @@
           <include name="afterClass"/>
         </methods>
       </class> <!-- com.tablerovencimiento.testng.TableroVencimientoTest -->
+    </classes>
+  </test> <!-- Flujo2Laboral(failed) -->
+  <test name="Flujo3Auditoria(failed)">
+    <classes>
       <class name="com.tablerovencimiento.testng.TableroAuditoriaTest">
         <methods>
           <include name="afterClass"/>
+          <include name="testFlujo3"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- com.tablerovencimiento.testng.TableroAuditoriaTest -->
+      <class name="com.tablerovencimiento.testng.TableroLaboralTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.tablerovencimiento.testng.TableroLaboralTest -->
+      <class name="com.tablerovencimiento.testng.TableroVencimientoTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.tablerovencimiento.testng.TableroVencimientoTest -->
     </classes>
-  </test> <!-- Flujo2Laboral(failed) -->
+  </test> <!-- Flujo3Auditoria(failed) -->
 </suite> <!-- Failed suite [Suite] -->
